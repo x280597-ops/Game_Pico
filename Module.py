@@ -17,10 +17,10 @@ class display():
         num_y=0
         for j in image:
           num_x=0
-          num_y += 1
           for i in j:
             self.tft.fill_rect(x+num_x*size,y+num_y*size,size,size,self.color_list[i])
             num_x+=1
+          num_y += 1
 class button():
     def __init__(self):
         self.up = Pin(2, Pin.IN, Pin.PULL_UP)
